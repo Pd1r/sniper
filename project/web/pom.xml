@@ -11,7 +11,6 @@
 
     <groupId>com.lmg.sniper.project.web</groupId>
     <artifactId>sniper-project-web</artifactId>
-    <version>${sniper.latest.version}</version>
     <packaging>jar</packaging>
 
     <name>sniper-project-web</name>
@@ -56,46 +55,6 @@
         <dependency>
             <groupId>com.lmg.sniper.project.task</groupId>
             <artifactId>sniper-project-task</artifactId>
-        </dependency>
-
-         <!--cas 单点登录-->
-        <dependency>
-            <groupId>com.miz.cas</groupId>
-            <artifactId>cas-client</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.jasig.cas.client</groupId>
-            <artifactId>cas-client-core</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-config</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-cas</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-taglibs</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.alibaba.rocketmq</groupId>
-            <artifactId>rocketmq-client</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.freemarker</groupId>
-            <artifactId>freemarker</artifactId>
         </dependency>
     </dependencies>
 

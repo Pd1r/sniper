@@ -11,24 +11,12 @@
 
     <groupId>com.lmg.sniper.project.common</groupId>
     <artifactId>sniper-project-common</artifactId>
-    <version>${sniper.latest.version}</version>
     <packaging>jar</packaging>
 
     <name>sniper-project-common</name>
     <url>http://maven.apache.org</url>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-redis</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.8.2</version>
-            <scope>test</scope>
-        </dependency>
-
         <!-- A simple convenience library for using a HttpURLConnection to make requests and access the response. -->
         <dependency>
             <groupId>com.github.kevinsawicki</groupId>

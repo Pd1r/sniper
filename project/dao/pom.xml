@@ -11,7 +11,6 @@
 
     <groupId>com.lmg.sniper.project.dao</groupId>
     <artifactId>sniper-project-dao</artifactId>
-    <version>${sniper.latest.version}</version>
     <packaging>jar</packaging>
 
     <name>sniper-project-dao</name>

@@ -30,7 +30,7 @@
   </listener>
   <!-- 
   <listener>
-    <listener-class>com.miz.alchemist.common.listener.PreDataLoaderContextListener</listener-class>
+    <listener-class>com.miz.sniper.common.listener.PreDataLoaderContextListener</listener-class>
   </listener>
    -->
   
