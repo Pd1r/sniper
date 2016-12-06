@@ -1,0 +1,3 @@
+mdcLogFilter=com.miz.alchemist.common.filter.dubbo.log.mdc.MdcLogFilter
+warningFilter=com.miz.alchemist.common.filter.dubbo.WarningFilter
+authorityFilter=com.miz.alchemist.common.filter.dubbo.AuthorityFilter

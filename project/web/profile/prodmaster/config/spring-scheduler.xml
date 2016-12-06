@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd    
+        http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd">
+	
+	<description>
+		支付系统批量任务
+	</description>
+	
+	<!-- 内部帐对账  -->
+    <import resource="classpath*:/config/scheduler/recon-inner-task.xml"/>
+    
+    <!-- 代扣流水任务 -->
+    <bean class="com.miz.alchemist.task.scheduler.flow.pay.PayHandlingResultScheduler" />
+    <bean class="com.miz.alchemist.task.scheduler.flow.pay.EasyPayHandlingResultScheduler"/>
+	<!-- 对私代付流水任务 -->
+	<bean class="com.miz.alchemist.task.scheduler.flow.repayment.RepaymentHandlingResultScheduler" />
+    <!-- 对公代付流水任务 -->
+    <bean class="com.miz.alchemist.task.scheduler.flow.corprepayment.HFPayCorpRepaymentHandlingResultScheduler"/>
+	<!-- 恒丰线下充值处理中的订单处理任务 -->
+	<bean class="com.miz.alchemist.task.scheduler.flow.deposit.HFPayCapitalTransferHandlingScheduler" />
+    
+     <!-- 健康性检查 -->
+	<bean class="com.miz.alchemist.task.scheduler.robust.BusinessNotifyRetryScheduler" />
+	<bean class="com.miz.alchemist.task.scheduler.robust.PaymentInitResultScheduler" />
+	<bean class="com.miz.alchemist.task.scheduler.robust.CommonInitTradeScheduler" />
+	
+	<!-- 警告 -->
+	<bean class="com.miz.alchemist.task.scheduler.warn.LongTimeHandlingTradeScheduler" />
+     
+<!-- 	<bean class="com.miz.alchemist.service.job.AlarmJob" />
+	<bean class="com.miz.alchemist.service.job.ScannJob" />
+	<bean class="com.miz.alchemist.service.job.AntiCheatJob" /> -->
+	
+</beans>

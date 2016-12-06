@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ - Copyright 1999-2011 Alibaba Group.
+ -
+ - Licensed under the Apache License, Version 2.0 (the "License");
+ - you may not use this file except in compliance with the License.
+ - You may obtain a copy of the License at
+ -
+ -      http://www.apache.org/licenses/LICENSE-2.0
+ -
+ - Unless required by applicable law or agreed to in writing, software
+ - distributed under the License is distributed on an "AS IS" BASIS,
+ - WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ - See the License for the specific language governing permissions and
+ - limitations under the License.
+-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+	
+	<dubbo:application name="${dubbo.provider.application.name}" owner="${dubbo.provider.application.owner}" organization="${dubbo.provider.application.organization}"/>
+    <dubbo:registry protocol="${dubbo.provider.registry.protocol}"
+    	address="${dubbo.provider.registry.address}"/>
+	<dubbo:protocol name="dubbo" host="${dubbo.provider.protocol.host}" port="${dubbo.provider.protocol.port}"  />
+	
+    <!-- use tomcat server
+    <dubbo:protocol name="rest" port="8888" threads="500" contextpath="services" server="tomcat" accepts="500"
+                    extension="com.alibaba.dubbo.rpc.protocol.rest.support.LoggingFilter"/>
+    <dubbo:protocol name="http" port="8889"/>
+    <dubbo:protocol name="hessian" port="8890"/>
+    <dubbo:protocol name="webservice" port="8892"/>
+	 -->
+	 
+	<dubbo:provider filter="mdcLogFilter,warningFilter,authorityFilter"></dubbo:provider>
+	
+	
+	<!-- 支付 -->
+	<bean id="payService" class="com.miz.alchemist.service.impl.PayServiceImpl" />
+	<bean id="payEasyService" class="com.miz.alchemist.service.impl.PayEasyServiceImpl" />
+	<!-- 认证 -->
+	<bean id="authenticateService" class="com.miz.alchemist.service.impl.AuthenticateServiceImpl" />
+	<!-- 代付 -->
+	<bean id="repaymentService" class="com.miz.alchemist.service.impl.RepaymentServiceImpl" />
+	<bean id="withdrawService" class="com.miz.alchemist.service.trans.WithdrawServiceImpl" />
+	<!-- 对公代付 -->
+	<bean id="corpRepaymentService" class="com.miz.alchemist.service.trans.CorpRepaymentServiceImpl" />
+	<!-- 查询服务 -->
+	<bean id="bankConfigQueryService" class="com.miz.alchemist.service.query.BankConfigQueryServiceImpl" />
+	<bean id="authQueryService" class="com.miz.alchemist.service.query.AuthQueryServiceImpl" />
+	<!-- 对账查询服务 -->
+	<bean id="paymentReconQueryService" class="com.miz.alchemist.service.query.recon.PaymentReconQueryServiceImpl" />
+	<!-- 补单服务 -->
+	<bean id="supplementOrdersService" class="com.miz.alchemist.service.impl.SupplementOrdersServiceImpl" />
+	<!-- 线下充值 -->
+	<bean id="capitalTransferService" class="com.miz.alchemist.service.trans.CapitalTransferServiceImpl" />
+	<!-- 对公户交易明细查询  -->
+	<bean id="capitalTransferDetailQueryService" class="com.miz.alchemist.service.query.trans.CapitalTransferDetailQueryServiceImpl" />
+	<!-- 
+	<bean id="repaymentQueryService" class="com.miz.alchemist.service.impl.RepaymentQueryServiceImpl" />
+	<bean id="queryService" class="com.miz.alchemist.service.impl.QueryServiceImpl" />
+	 -->
+	 
+	<!-- 支付 -->
+	<dubbo:service interface="com.miz.alchemist.service.PayService" 
+		ref="payService" protocol="dubbo" retries="0" cluster="failfast"/>
+	<dubbo:service interface="com.miz.alchemist.service.PayEasyService" 
+		ref="payEasyService" protocol="dubbo" retries="0" cluster="failfast"/>
+	<!-- 认证 -->
+	<dubbo:service interface="com.miz.alchemist.service.AuthenticateService" 
+		ref="authenticateService" protocol="dubbo"/>
+	<!-- 代付 -->
+	<dubbo:service interface="com.miz.alchemist.service.RepaymentService" 
+		ref="repaymentService" protocol="dubbo" retries="0" cluster="failfast"/>
+	<dubbo:service interface="com.miz.alchemist.service.trans.WithdrawService" 
+		ref="withdrawService" protocol="dubbo" retries="0" cluster="failfast"/>
+	<!-- 对公代付 -->	
+	<dubbo:service interface="com.miz.alchemist.service.trans.CorpRepaymentService" 
+		ref="corpRepaymentService" protocol="dubbo" retries="0" cluster="failfast"/>
+	
+	<!-- 查询服务 -->
+	<dubbo:service interface="com.miz.alchemist.service.query.BankConfigQueryService" 
+		ref="bankConfigQueryService" protocol="dubbo" retries="0" cluster="failfast"/>
+	<dubbo:service interface="com.miz.alchemist.service.query.AuthQueryService" 
+		ref="authQueryService" protocol="dubbo" retries="0" cluster="failfast"/>
+	<!-- 对账查询服务 -->
+	<dubbo:service interface="com.miz.alchemist.service.query.recon.PaymentReconQueryService" 
+		ref="paymentReconQueryService" protocol="dubbo" retries="0" cluster="failfast"/>
+	<!-- 补单服务 -->
+	<dubbo:service interface=" com.miz.alchemist.service.SupplementOrdersService"
+		ref="supplementOrdersService" protocol="dubbo" retries="0" cluster="failfast" />
+	<!-- 线下充值 -->
+	<dubbo:service interface=" com.miz.alchemist.service.trans.CapitalTransferService"
+		ref="capitalTransferService" protocol="dubbo" retries="0" cluster="failfast" />
+		
+	<!-- 对公户交易明细查询 -->
+	<dubbo:service interface=" com.miz.alchemist.service.query.trans.CapitalTransferDetailQueryService"
+		ref="capitalTransferDetailQueryService" protocol="dubbo" retries="0" cluster="failfast" />
+	<!-- 
+	<dubbo:service interface="com.miz.alchemist.service.RepaymentQueryService" 
+		ref="repaymentQueryService"  protocol="dubbo" retries="0" cluster="failfast"/>
+	<dubbo:service interface="com.miz.alchemist.service.QueryService" 
+		ref="queryService"  protocol="dubbo" retries="0" cluster="failfast"/>
+	 -->
+	
+</beans>
