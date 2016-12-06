@@ -1,4 +1,4 @@
-package com.lmg.sniper.common.util;
+package com.lmg.sniper.common;
 
 
 import com.github.kevinsawicki.http.HttpRequest;
