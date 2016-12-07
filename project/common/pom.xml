@@ -23,5 +23,13 @@
             <artifactId>http-request</artifactId>
             <version>6.0</version>
         </dependency>
+
+        <!-- 生成二维码jar包 start -->
+        <dependency>
+            <groupId>com.swetake</groupId>
+            <artifactId>Qrcode_swetake</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <!-- 生成二维码jar包 end -->
     </dependencies>
 </project>
