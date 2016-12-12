@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<banks>
+    <bankBean>
+        <code>01020000</code>
+        <name>工商银行</name>
+        <thirdPartys>
+            <third channel="YEE_PAY" code="ICBC" />
+            <third channel="CHINA_PAY" code="0102" />
+            <third channel="PING_AN" code="10001" />
+            <!-- UM_PAY 联动优势-->
+            <third channel="UM_PAY" code="ICBC" />
+            <third channel="BAO_FOO" code="ICBC" />
+             <third channel="HF_PAY" code="0102" />
+        </thirdPartys>
+    </bankBean>
+
+    <bankBean>
+        <code>03030000</code>
+        <name>光大银行</name>
+        <thirdPartys>
+            <third channel="YEE_PAY" code="CEB" />
+            <third channel="CHINA_PAY" code="0303" />
+            <third channel="PING_AN" code="10009" />
+            <!-- UM_PAY 联动优势-->
+            <third channel="UM_PAY" code="CEB" />
+            <third channel="BAO_FOO" code="CEB" />
+             <third channel="HF_PAY" code="0303" />
+        </thirdPartys>
+    </bankBean>
+
+    <bankBean>
+        <code>03060000</code>
+        <name>广发银行</name>
+        <thirdPartys>
+            <third channel="YEE_PAY" code="GDB" />
+            <third channel="CHINA_PAY" code="0306" />
+            <third channel="PING_AN" code="10011" />
+            <!-- UM_PAY 联动优势-->
+            <third channel="UM_PAY" code="GDB" />
+            <third channel="BAO_FOO" code="GDB" />
+             <third channel="HF_PAY" code="0306" />
+        </thirdPartys>
+    </bankBean>
+
+    <bankBean>
+        <code>03040000</code>
+        <name>华夏银行</name>
+        <thirdPartys>
+            <third channel="YEE_PAY" code="HXB" />
+            <third channel="CHINA_PAY" code="0304" />
+            <!-- UM_PAY 联动优势-->
+            <third channel="UM_PAY" code="HXB" />
+            <third channel="BAO_FOO" code="HBX" />
+        </thirdPartys>
+    </bankBean>
+
+    <bankBean>
+        <code>01050000</code>
+        <name>建设银行</name>
+        <thirdPartys>
+            <third channel="YEE_PAY" code="CCB" />
+            <third channel="CHINA_PAY" code="0105" />
+            <third channel="PING_AN" code="10004" />
+            <!-- UM_PAY 联动优势-->
+            <third channel="UM_PAY" code="CCB" />
+            <third channel="BAO_FOO" code="CCB" />
+             <third channel="HF_PAY" code="0105" />
+        </thirdPartys>
+    </bankBean>
+
+    <bankBean>
+        <code>03010000</code>
+        <name>交通银行</name>
+        <thirdPartys>
+            <third channel="YEE_PAY" code="BOCO" />
+            <third channel="CHINA_PAY" code="0301" />
+            <!-- UM_PAY 联动优势-->
+            <third channel="UM_PAY" code="COMM" />
+            <third channel="BAO_FOO" code="BCOM" />
+        </thirdPartys>
+    </bankBean>
+
+    <bankBean>
+        <code>03050000</code>
+        <name>民生银行</name>
+        <thirdPartys>
+            <third channel="YEE_PAY" code="CMBC" />
+            <third channel="CHINA_PAY" code="0305" />
+            <third channel="PING_AN" code="10010" />
+            <!-- UM_PAY 联动优势-->
+            <third channel="UM_PAY" code="CMBC" />
+            <third channel="BAO_FOO" code="CMBC" />
+            <third channel="HF_PAY" code="0305" />
+        </thirdPartys>
+    </bankBean>
+
+    <bankBean>
+        <code>01030000</code>
+        <name>农业银行</name>
+        <thirdPartys>
+            <third channel="YEE_PAY" code="ABC" />
+            <third channel="CHINA_PAY" code="0103" />
+            <third channel="PING_AN" code="10002" />
+            <!-- UM_PAY 联动优势-->
+            <third channel="UM_PAY" code="ABC" />
+            <third channel="BAO_FOO" code="ABC" />
+             <third channel="HF_PAY" code="0103" />
+        </thirdPartys>
+    </bankBean>
+
+    <bankBean>
+        <code>03070000</code>
+        <name>平安银行</name>
+        <thirdPartys>
+            <third channel="YEE_PAY" code="PINGAN" />
+            <third channel="CHINA_PAY" code="0410" />
+            <third channel="PING_AN" code="12" />
+            <!-- UM_PAY 联动优势-->
+            <third channel="UM_PAY" code="SPAB" />
+            <third channel="BAO_FOO" code="PAB" />
+             <third channel="HF_PAY" code="0410" />
+        </thirdPartys>
+    </bankBean>
+
+    <bankBean>
+        <code>03100000</code>
+        <name>浦发银行</name>
+        <thirdPartys>
+            <third channel="YEE_PAY" code="SPDB" />
+            <third channel="CHINA_PAY" code="0310" />
+            <!-- UM_PAY 联动优势-->
+            <third channel="UM_PAY" code="SPDB" />
+            <third channel="BAO_FOO" code="SPDB" />
+            
+        </thirdPartys>
+    </bankBean>
+
+    <bankBean>
+        <code>03090000</code>
+        <name>兴业银行</name>
+        <thirdPartys>
+            <third channel="YEE_PAY" code="CIB" />
+            <third channel="CHINA_PAY" code="0309" />
+            <third channel="PING_AN" code="10008" />
+            <!-- UM_PAY 联动优势-->
+            <third channel="UM_PAY" code="CIB" />
+            <third channel="BAO_FOO" code="CIB" />
+             <third channel="HF_PAY" code="0309" />
+        </thirdPartys>
+    </bankBean>
+
+    <bankBean>
+        <code>01000000</code>
+        <name>邮政储蓄</name>
+        <thirdPartys>
+            <third channel="YEE_PAY" code="POST" />
+            <third channel="CHINA_PAY" code="0100" />
+            <third channel="PING_AN" code="10005" />
+            <!-- UM_PAY 联动优势-->
+            <third channel="UM_PAY" code="PSBC" />
+            <third channel="BAO_FOO" code="PSBC" />
+            <third channel="HF_PAY" code="0100" />
+        </thirdPartys>
+    </bankBean>
+
+    <bankBean>
+        <code>03080000</code>
+        <name>招商银行</name>
+        <thirdPartys>
+            <third channel="YEE_PAY" code="CMBCHINA" />
+            <third channel="CHINA_PAY" code="0308" />
+            <third channel="PING_AN" code="10006" />
+            <!-- UM_PAY 联动优势-->
+            <third channel="UM_PAY" code="CMB" />
+            <third channel="BAO_FOO" code="CMB" />
+             <third channel="HF_PAY" code="0308" />
+        </thirdPartys>
+    </bankBean>
+
+    <bankBean>
+        <code>01040000</code>
+        <name>中国银行</name>
+        <thirdPartys>
+            <third channel="YEE_PAY" code="BOC" />
+            <third channel="CHINA_PAY" code="0104" />
+            <third channel="PING_AN" code="10003" />
+            <!-- UM_PAY 联动优势-->
+            <third channel="UM_PAY" code="BOC" />
+            <third channel="BAO_FOO" code="BOC" />
+            <third channel="HF_PAY" code="0104" />
+        </thirdPartys>
+    </bankBean>
+
+    <bankBean>
+        <code>03020000</code>
+        <name>中信银行</name>
+        <thirdPartys>
+            <third channel="YEE_PAY" code="ECITIC" />
+            <third channel="CHINA_PAY" code="0302" />
+            <!-- UM_PAY 联动优势-->
+            <third channel="UM_PAY" code="CITIC" />
+            <third channel="BAO_FOO" code="CITIC" />
+            <third channel="HF_PAY" code="0302" />
+        </thirdPartys>
+    </bankBean>
+
+    <bankBean>
+        <code>04030000</code>
+        <name>北京银行</name>
+        <thirdPartys>
+            <third channel="YEE_PAY" code="BCCB" />
+            <third channel="CHINA_PAY" code="0403" />
+            <third channel="PING_AN" code="10013" />
+        </thirdPartys>
+    </bankBean>
+</banks>
